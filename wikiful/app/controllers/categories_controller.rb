@@ -5,7 +5,6 @@ class CategoriesController < ApplicationController
 
 	def show
 		@category = Category.find(params[:id])
-		@article = Article.find(params[:id])
 	end
 
 	private
