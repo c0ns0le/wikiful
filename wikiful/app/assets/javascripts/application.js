@@ -15,3 +15,14 @@
 //= require twitter/bootstrap
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function(){
+
+$('.boomButton').click(function() {
+
+	$('#whatup').toggle();
+	$('.boomButton').hide();
+
+});
+
+});

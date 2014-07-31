@@ -17,3 +17,11 @@
  .bottoms { 
  	padding-bottom: 70px;
  }
+
+a:link {
+	text-decoration: none;
+}
+
+#whatup {
+	display: none;
+}
