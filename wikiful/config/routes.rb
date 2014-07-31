@@ -7,7 +7,8 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'welcome#index'
 
-  resources :articles, :categories
+  resources :articles, :categories, :welcome #these are the pages, for example www.wikiful.com/welcome is the welcome page
+  #this then goes to the welcome controller, model, and view
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
