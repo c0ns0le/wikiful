@@ -41,3 +41,7 @@ gem 'spring',        group: :development
 
 gem 'faker'
 #Faker generates text for test data
+
+gem 'twitter-bootstrap-rails'
+gem 'less-rails'
+gem 'therubyracer'
