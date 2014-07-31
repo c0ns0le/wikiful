@@ -5,6 +5,7 @@ class ArticlesController < ApplicationController
 
 	def show
 		@article = Article.find(params[:id])
+		@category = Category.find(Article.find(params[:id]).category_ids.first)
 	end
 
 	def new
