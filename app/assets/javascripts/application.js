@@ -18,11 +18,4 @@
 
 $(document).ready(function(){
 
-$('.boomButton').click(function() {
-
-	$('#whatup').toggle();
-	$('.boomButton').hide();
-
-});
-
 });
