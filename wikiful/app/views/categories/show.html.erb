@@ -1,0 +1,14 @@
+<div>
+    <h3>All articles filed under: <%= @category.name %></h3>
+    <% @category.articles.each do |article| %> <!--tested in rails console first with Category.find(2).all -->
+  <div>
+    <h3><%= link_to article.title, article %></h3>
+          <p>Published on <%= article.created_at.strftime('%b %d, %Y') %></p>
+    <p>Filed under: <% article.categories.each do |category| %>
+                      <%= link_to category.name, category %>&nbsp;
+                    <% end %>
+    </p>
+    <p><%= truncate(article.content, length: 200) %></p>
+  </div>
+<% end %>
+</div>
