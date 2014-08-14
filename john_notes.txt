@@ -1,0 +1,46 @@
+
+added gem to Gemfile
+
+group :development , :test do
+   gem "rspec-rails"
+   gem 'sqlite3' # just for my temp test
+end
+
+rails generate rspec:install
+
+rake db:migrate
+
+rake spec
+    No examples found.
+
+# add spec/views/messages/show.html.erb_spec.rb
+
+require 'spec_helper'
+describe "messages/show.html.erb" do
+   it "displays the text attribute of the message" do
+    render
+    rendered.should contain("Hello world!")
+  end
+end
+
+
+ rake spec
+/Users/john/.rvm/rubies/ruby-2.0.0-p353/bin/ruby -S rspec ./spec/views/messages/show.html.erb_spec.rb
+F
+
+Failures:
+
+  1) messages/show.html.erb displays the text attribute of the message
+     Failure/Error: render
+     ActionView::MissingTemplate:
+       Missing template messages/show with {:locale=>[:en], :formats=>["html"], :variants=>[], :handlers=>["erb"]}. Searched in:
+         * "/Users/john/dev/rails/heroku/sample/rails4/thinkful/dbogart/wikiful/app/views"
+         * "/Users/john/.rvm/gems/ruby-2.0.0-p353/gems/twitter-bootstrap-rails-2.2.8/app/views"
+     # ./spec/views/messages/show.html.erb_spec.rb:4:in `block (2 levels) in <top (required)>'
+
+Finished in 0.018 seconds
+1 example, 1 failure
+
+Failed examples:
+
+rspec ./spec/views/messages/show.html.erb_spec.rb:3 

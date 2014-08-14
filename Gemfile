@@ -46,6 +46,25 @@ gem 'twitter-bootstrap-rails'
 gem 'less-rails'
 gem 'therubyracer'
 
+
+
+##################################################
+#
+#  Adding rspec
+#  add the rspec-rails gem
+#  then 
+# rails generate rspec:install
+# rake db:migrate
+# rake spec
+#
+##################################################
+group :development , :test do
+   gem "rspec-rails"
+   gem 'sqlite3' # just for my temp test
+end
+
+
+
 group :production do
   gem 'rails_12factor'
 end
